@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Skills</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <video autoplay loop muted plays-inline class="back-vid">
+    <source src="images/galaxy.mp4" type="video/mp4">
+  </video>
+  
+  <section class="main-section">
+    <nav>
+      <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">My</span> Skills</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://github.com/Pasinduhapuachchige?tab=repositories">Projects</a></li>
+        <li><a class="active" href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="skills-container">
+      <!-- Technical Skills -->
+      <div class="skills-category" data-aos="fade-up" data-aos-duration="1000">
+        <h2><i class='bx bx-code-alt'></i> Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="flip-left" data-aos-delay="100">
+            <i class='bx bxl-html5'></i>
+            <h3>PHP</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 30%"></div>
+              <span>30%</span>
+            </div>
+          </div>
+          
+          <div class="skill-card" data-aos="flip-left" data-aos-delay="200">
+            <i class='bx bxl-css3'></i>
+            <h3>CSS3</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 45%"></div>
+              <span>40%</span>
+            </div>
+          </div>
+          
+          <div class="skill-card" data-aos="flip-left" data-aos-delay="300">
+            <i class='bx bxl-javascript'></i>
+            <h3>JavaScript</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 45%"></div>
+              <span>45%</span>
+            </div>
+          </div>
+          
+          <div class="skill-card" data-aos="flip-left" data-aos-delay="400">
+            <i class='bx bxl-react'></i>
+            <h3>React</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 40%"></div>
+              <span>40%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Soft Skills -->
+      <div class="skills-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+        <h2><i class='bx bx-brain'></i> Soft Skills</h2>
+        <div class="soft-skills">
+          <span data-aos="zoom-in" data-aos-delay="600">Problem Solving</span>
+          <span data-aos="zoom-in" data-aos-delay="700">Teamwork</span>
+          <span data-aos="zoom-in" data-aos-delay="800">Communication</span>
+          <span data-aos="zoom-in" data-aos-delay="900">Time Management</span>
+          <span data-aos="zoom-in" data-aos-delay="1000">Creativity</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
