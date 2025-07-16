@@ -29,7 +29,7 @@
       <!-- Contact Form -->
       <div class="contact-form" data-aos="fade-right" data-aos-duration="1000">
         <h2>Get In Touch</h2>
-        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+        <form id="contactForm" action="/contact" method="POST">
           <div class="form-group">
             <input type="text" name="name" placeholder="Your Name" required>
           </div>
@@ -83,32 +83,7 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
-    
-    // Form submission handling
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const formData = new FormData(form);
-      
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      .then(response => {
-        if (response.ok) {
-          alert('Message sent successfully!');
-          form.reset();
-        } else {
-          throw new Error('Network response was not ok');
-        }
-      })
-      .catch(error => {
-        alert('There was a problem sending your message. Please try again later.');
-      });
-    });
+    // Remove the fetch-based form submission JS
   </script>
 </body>
 </html>
