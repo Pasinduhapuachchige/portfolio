@@ -15,12 +15,12 @@ app.use(express.static(__dirname)); // Serve static files (HTML, CSS, etc.)
 app.post('/contact', async (req, res) => {
   const { name, email, subject, message } = req.body;
 
-  // Configure your email transport
+  // Configure your email transport using environment variables
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'your.email@gmail.com', // Replace with your email
-      pass: 'your-app-password'     // Use an app password, not your real password
+      user: process.env.EMAIL_USER, // Set EMAIL_USER in your environment variables
+      pass: process.env.EMAIL_PASS  // Set EMAIL_PASS in your environment variables
     }
   });
 
