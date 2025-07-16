@@ -29,7 +29,7 @@
       <!-- Contact Form -->
       <div class="contact-form" data-aos="fade-right" data-aos-duration="1000">
         <h2>Get In Touch</h2>
-        <form id="contactForm" action="/contact" method="POST">
+        <form id="contactForm">
           <div class="form-group">
             <input type="text" name="name" placeholder="Your Name" required>
           </div>
@@ -83,7 +83,29 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
-    /netlify/functions/sendMail.js    // Remove the fetch-based form submission JS
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value
+      };
+      fetch('/.netlify/functions/sendMail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert(data.message);
+        form.reset();
+      })
+      .catch(() => {
+        alert('There was a problem sending your message. Please try again later.');
+      });
+    });
   </script>
 </body>
 </html>
